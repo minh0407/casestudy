@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game tai xiu</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="logo">
+            <img src="img/download.png" class="logo"/></div>
+        <div class="nav">
+            <img src="img/download.jpg" class="logo" id="avatar"/>
+            <div class="name">
+                <p id="welcome"></p>
+            </div>
+            <div class="header_bank" id="money">
+                <p id="income"></p>
+                <a href="baitapjava2.html" class="income_money1"> clcik </a>
+
+            </div>
+        </div>
+        <div class="tai_xiu">
+            <div class="box_of_tai_xiu">
+                <div class="income">
+                    <div class="xiu_left">
+                        <h4> XỈU </h4>
+                        <div class="xiu_bet">
+                            <div class="amount"><p id="xiu_amount"> 0 </p></div>
+                            <button type="button" onclick="xiuapply()" id="xiuapply1" class="bet"> dat cuoc</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tai_right">
+                    <h4> TÀI</h4>
+                    <div class="tai_bet">
+                        <div class="amount"><p id="tai_amount"> 0</p></div>
+                        <button type="button" onclick="taiapply()" id="taiapply1" class="bet"> dat cuoc</button>
+                    </div>
+                </div>
+                <div class="centre">
+                    <div class="3_dice">
+                        <div class="time-run"><span id="timer"></span></div>
+                        <div class="surface">
+                        <div class="dice" id="dice1"> dice1:
+                            <div class="front" id="1"></div>
+                            <div class="back" id="2"></div>
+                            <div class="top" id="3"></div>
+                            <div class="bottom" id="4"></div>
+                            <div class="left" id="5"></div>
+                            <div class="right" id="6"></div>
+
+                        </div>
+                        <div class="dice" id="dice2"> dice 2:</div>
+                        <div class="dice" id="dice3"> dice 3:</div>
+                        </div>
+                        <div class="bet_amount">
+
+                            <input type="number" id="number-input" class="button-number" value="0"></input
+                            <div class="button-bet">
+                                <button onclick="bet(1)" class="button-number"   > 1</button>
+                                <button onclick="bet(10)" class="button-number" > 10</button>
+                                <button onclick="bet(100)" class="button-number" > 100</button>
+                                <button onclick="bet(1000)" class="button-number" > 1000</button>
+                                <button onclick="clearinput()" class="button-number" >clear</button>
+                            </div>
+                        </div>
+                        <div id="history" class="history">
+                            <span id="history_0" class="history"></span>
+                            <span id="history_1" class="history"></span>
+                            <span id="history_2" class="history"></span>
+                            <span id="history_3" class="history"></span>
+                            <span id="history_4" class="history"></span>
+                            <span id="history_5" class="history"></span>
+                            <span id="history_6" class="history"></span>
+                            <span id="history_7" class="history"></span>
+                            <span id="history_8" class="history"></span>
+                            <span id="history_9" class="history"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

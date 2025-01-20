@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <form>
+        <input type="text" name="file" id="file" placeholder="nhap ten user">
+
+    </form>
+    <br>
+    <br>
+    <h3> nap tien vao game</h3>
+    <div class="inout money">
+<!--        <input type="text" id="display" name="display" readonly>-->
+
+<!--        <div class="buttons">-->
+<!--            <button onclick="press('0')">0</button>-->
+<!--            <button onclick="press('1')">1</button>-->
+<!--            <button onclick="press('2')">2</button>-->
+<!--            <button onclick="press('3')">3</button>-->
+<!--            <button onclick="press('4')">4</button>-->
+<!--            <button onclick="press('5')">5</button>-->
+<!--            <button onclick="press('6')">6</button>-->
+<!--            <button onclick="press('7')">7</button>-->
+<!--            <button onclick="press('8')">8</button>-->
+<!--            <button onclick="press('9')">9</button>-->
+<!--            <button onclick="minus()">minus</button>-->
+            <button class="submit" onclick="saveName();saveMoney()">enter</button>
+
+<!--        </div>-->
+        <input type="number" id="money" placeholder="vnd">
+    </div>
+</div>
+<script>
+
+    function saveName() {
+        const name = document.getElementById("file").value;
+        if (name) {
+            sessionStorage.setItem("username", name);
+            window.location.href = 'game-tai-xiu.html';
+
+        } else {
+            alert("nhap ten di");
+        }
+    }
+    function saveMoney() {
+        let money=document.getElementById("money").value;
+        if (money){
+            sessionStorage.setItem("money", money);
+            window.location.href = 'game-tai-xiu.html';
+        }
+        else{
+            alert("nap tien da");
+        }
+    }
+
+    // let currentinput = "";
+
+    // function press(value) {
+    //     currentinput += value;
+    //     document.getElementById("display").value = currentinput;
+    // }
+    //
+    // function minus() {
+    //     currentinput = currentinput.slice(0, -1);
+    //     document.getElementById("display").value = currentinput
+    // }
+    //
+    // function saveMoney() {
+    //     if (currentInput) {
+    //          localStorage.setItem("money", currentInput.value );
+    //         window.location.href = 'game-tai-xiu.html';
+    //     } else {
+    //         alert("Please enter an amount to deposit.");
+    //     }
+    //
+    // }
+
+
+</script>
+</body>
+</html>
